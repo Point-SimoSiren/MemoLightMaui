@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MemoLightMaui.MainPage">
+
+    
+    <ContentPage Title="Memo">
+
+        <ScrollView>
+            <StackLayout>
+
+                <Frame BackgroundColor="Black" Padding="16">
+
+                    <Label Text="Muistio" HorizontalTextAlignment="Center"
+                   TextColor="Orange" FontSize="24"/>
+
+                </Frame>
+
+                <StackLayout  HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+
+                    <Entry x:Name="inputKentta" FontSize="28" WidthRequest="300" Placeholder="Kirjoita tähän..." />
+
+                    <Button x:Name="tallennusNappi" Clicked="tallennusNappi_Clicked" Margin="0, 30, 0, 0" Padding="40, 20, 40, 20" Text="Tallenna" />
+                
+                    <Label x:Name="outputLabel" FontSize="26" IsVisible="true" />
+
+                    <!-- POISTO -->
+                    
+                    <Button x:Name="poistoNappi" Text="Tyhjennä" StyleClass="btn" Clicked="poistoNappi_Clicked" />
+
+                    <Label x:Name="vahvistusInfo" IsVisible="false" Text="Vahvista poistaminen liuttamalla oikealle" />
+                    <Slider x:Name="vahvistusKytkin" IsVisible="false" ValueChanged="vahvistusKytkin_ValueChanged" />
+
+                    
+                </StackLayout>
+
+                <Frame BackgroundColor="Black" Padding="16" CornerRadius="0">
+                    <Label Text="made by me" HorizontalTextAlignment="Center" TextColor="Orange" FontSize="14"/>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    
+    
+    <ContentPage Title="Light">
+        
+    </ContentPage>
+
+
+</TabbedPage>
